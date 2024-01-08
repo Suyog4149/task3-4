@@ -121,7 +121,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        // Chart.js code for the first graph
         const revenueLabels = ['Everett', 'Seattle', 'Lynnwood', 'Bothell', 'Mukilteo', 'Edmonds'];
         const revenueData = {
             labels: revenueLabels,
@@ -162,12 +161,9 @@
             },
         };
 
-        // Get the canvas element for the first graph
         const revenueCtx = document.getElementById('revenueChart').getContext('2d');
-        // Create a new chart and render it on the canvas
         new Chart(revenueCtx, revenueConfig);
 
-        // Chart.js code for the second graph
         const jobTypeLabels = ['Service Plumbing', 'Bid Work HVAC', 'Service HVAC', 'Bid Work Plumbing', 'HWT Replacement', 'Maintenance', 'Material Sale'];
         const jobTypeData = {
             labels: jobTypeLabels,
@@ -208,9 +204,7 @@
             },
         };
 
-        // Get the canvas element for the second graph
         const jobTypeCtx = document.getElementById('jobTypeChart').getContext('2d');
-        // Create a new chart and render it on the canvas
         new Chart(jobTypeCtx, jobTypeConfig);
     </script>
 </body>
