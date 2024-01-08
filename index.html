@@ -11,13 +11,13 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            background-color: #1a1a1a; /* Dark black background outside the box */
-            color: #fff; /* Font color outside the box */
+            background-color: #1a1a1a; 
+            color: #fff; 
         }
 
         #loginContainer {
             position: relative;
-            background-color: #0b0a0a; /* White background inside the box */
+            background-color: #0b0a0a; 
             border-radius: 8px;
             overflow: hidden;
             width: 450px;
@@ -38,13 +38,12 @@
         #logo img {
             height: 100px;
             padding-left: 50px;
-            /* Increased image size, adjust as needed */
         }
 
         #loginBox label {
             display: block;
             margin-bottom: 8px;
-            color: #000; /* Font color inside the box */
+            color: #000; 
         }
 
         #loginBox input {
@@ -52,14 +51,14 @@
             padding: 8px;
             margin-bottom: 12px;
             box-sizing: border-box;
-            background-color: #eee; /* Background color for username and password fields */
-            color: #000; /* Font color for username and password fields */
-            border: 1px solid #ccc; /* Border color for username and password fields */
+            background-color: #eee; 
+            color: #000; 
+            border: 1px solid #ccc; 
             border-radius: 4px;
         }
 
         #loginBox button {
-            background-color: #8cc63f; /* Light green color for the button */
+            background-color: #8cc63f; 
             color: #fff;
             padding: 10px;
             border: none;
@@ -68,7 +67,7 @@
         }
 
         #loginBox button:hover {
-            background-color: #6b9c32; /* Darker green color on hover */
+            background-color: #6b9c32;
         }
 
         #loginBox a {
@@ -105,7 +104,6 @@
             var usernameInput = document.getElementById('username');
             var usernameValue = usernameInput.value;
 
-            // Simple email validation regex
             var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
             if (!emailRegex.test(usernameValue)) {
@@ -118,7 +116,6 @@
             var passwordInput = document.getElementById('password');
             var passwordValue = passwordInput.value;
 
-            // Password should contain at least one uppercase letter and one number
             var passwordRegex = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d@]{8,}$/;
 
             if (!passwordRegex.test(passwordValue)) {
@@ -128,14 +125,13 @@
         }
 
         function validateLogin(event) {
-            event.preventDefault(); // Prevent the form from submitting
+            event.preventDefault(); 
 
             var passwordInput = document.getElementById('password');
             var passwordValue = passwordInput.value;
 
-            // Check if the password is correct for redirection
             if (passwordValue === 'SmartServTest@123') {
-                window.location.href = 'd1.html'; // Redirect to the dashboard page
+                window.location.href = 'd1.html'; 
             } else {
                 alert('Incorrect password. Please try again.');
                 passwordInput.value = '';
@@ -143,7 +139,6 @@
         }
 
         function openEmailClient() {
-            // This will open the default email client with the pre-filled email address
             window.location.href = 'mailto:support@smartserv.io';
         }
     </script>
